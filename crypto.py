@@ -72,6 +72,7 @@ class Crypto:
                 with open("img/logo.png", "wb") as data:
                     shutil.copyfileobj(res.raw, data)
             
+            # Resize logo (64 x 64)
             image = Image.open("img/logo.png")
             image = image.resize((64, 64))
             image.save("img/logo.png")
