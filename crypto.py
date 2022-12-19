@@ -1,6 +1,7 @@
 import json
 import shutil
 import requests
+from PIL import Image
 
 
 class Crypto:
@@ -70,3 +71,7 @@ class Crypto:
             if res.status_code == 200:
                 with open("img/logo.png", "wb") as data:
                     shutil.copyfileobj(res.raw, data)
+            
+            image = Image.open("img/logo.png")
+            image = image.resize((64, 64))
+            image.save("img/logo.png")
