@@ -9,7 +9,7 @@
 
 ## Install library 
 
-pip install -r "_Path_to_requirements.txt"
+pip install -r "requirements.txt"
 
 ## Use
 
